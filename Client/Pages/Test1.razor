@@ -1,0 +1,20 @@
+﻿@page "/test1"
+
+<h3>Test1</h3>
+
+<ul>
+    @foreach (int x in numbers)
+    {
+        <li>Number: @x</li>
+    }
+</ul>
+
+@code {
+    List<int> numbers = new List<int>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        for (int i = 0; i < 10; i++)
+            numbers.Add(i);
+    }
+}
